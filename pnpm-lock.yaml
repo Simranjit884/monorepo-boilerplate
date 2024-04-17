@@ -10,6 +10,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@foundation/sample-lib':
+        specifier: workspace:^
+        version: link:../../libs/sample-lib
       '@nestjs/common':
         specifier: ^10.0.0
         version: 10.3.7(reflect-metadata@0.2.1)(rxjs@7.8.1)
@@ -129,6 +132,12 @@ importers:
       typescript:
         specifier: ^5
         version: 5.4.3
+
+  libs/sample-lib:
+    devDependencies:
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
 packages:
 
@@ -6419,6 +6428,12 @@ packages:
 
   /typescript@5.4.3:
     resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
